@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Calculator</title>
+
+    <style>
+        /* Define styles for the form */
+        form {
+            margin: 20px auto; /* Center align horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        /* Define styles for input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Define styles for buttons */
+        input[type="button"] {
+            width: 49%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Define styles for the result field */
+        input[name="total"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+    <script language="javascript">
+        function sum() {
+            var a = Number(document.calculator.number1.value);
+            var b = Number(document.calculator.number2.value);
+            var c = a + b;
+            document.calculator.total.value = c;
+        }
+
+        function diff() {
+            var a = Number(document.calculator.number1.value);
+            var b = Number(document.calculator.number2.value);
+            var c = a - b;
+            document.calculator.total.value = c;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form name="calculator">
+        First Number: <input type="text" name="number1"><br>
+        Second Number: <input type="text" name="number2"><br>
+
+        <input type="button" value="SUM" onclick="javascript:sum();">
+        <input type="button" value="DIFFERENCE" onclick="javascript:diff();"><br>
+
+        Result is: <input type="text" name="total">
+    </form>
+
+</body>
+
+</html>
